@@ -1,4 +1,4 @@
-# Variable Declartion:
+# Variable Declaration:
 
 TypeScript supports `let` and `const` which are relatively new in JavaScript.
 
@@ -69,14 +69,14 @@ let age: number = 32;
 let sentence: string = `Hello, my name is ${ fullName }. I'll be ${age + 1} years old next month.`;
 ```
 
-- Arrays are declared using [] notation or generic array type.
+- **Arrays** are declared using [] notation or generic array type.
 
 ```typescript
 let list: number[] = [1, 2, 3];
 let list: Array<number> = [1, 2, 3];
 ```
 
-- Tuple types allow you to express an array where the type of a fixed number of elements is known.
+- **Tuple** types allow you to express an array where the type of a fixed number of elements is known.
 
 ```typescript
 // Declare a tuple type
@@ -89,7 +89,7 @@ console.log(x[0].substr(1));  // OK
 console.log(x[1].substr(1));  // Error
 ```
 
-- Enum is used to give friendly names to sets of numeric values. Enums begin numbering their members starting at 0. This can also be set manually by assigning different values.
+- **Enum** is used to give friendly names to sets of numeric values. Enums begin numbering their members starting at 0. This can also be set manually by assigning different values.
 
 ```typescript
 enum Color {Red, Green, Blue}
@@ -104,7 +104,7 @@ let colorName: string = Color[2];
 console.log(colorName);   // Green
 ```
 
-- Any: When value of the variable is not already known. It might come from 3rd party library. To let the values pass through and skip the type checking, we use any type.
+- **Any**: When value of the variable is not already known. It might come from 3rd party library. To let the values pass through and skip the type checking, we use any type.
 
 ```TypeScript
 let notSure: any = 4;
@@ -115,7 +115,7 @@ let list: any[] = [1, true, "free"];
 list[1] = 100;
 ```
 
-- void means absense of having any type at all. `void` is mainly used as a return of the function that does not return anything.
+- **void** means absense of having any type at all. `void` is mainly used as a return of the function that does not return anything.
 
 ```typescript
 function warn User(): void {
@@ -125,7 +125,7 @@ function warn User(): void {
 
 If you define a variable as `void`, then you can assign only `null` or `undefined` to them.
 
-- `null` and `undefined` are different types in TypeScript.
+- **`null` and `undefined`** are different types in TypeScript.
 
 ```typescript
 let u: undefined = undefined;
@@ -140,7 +140,9 @@ let x;
 
 is equivalent to
 
-`let x: any`.
+```typescript
+let x: any
+```.
 
 ### Type assertion:
 
