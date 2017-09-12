@@ -17,7 +17,20 @@ You can also check the version of TypeScript compiler using:
 
 `tsc -v`
 
+## Prerequisite:
+
+This lessons assume familiarity with OOP, preferably Java or C#. This course does not explain OOP concepts so it would be helpful if you already know about them.
+
+### Benefits of Typescript
+
+- Compilation
+- Strong typing
+- Integration with popular JS libraries
+- Encapsulation
+- Private and public member variables
+
 **Table of Contents**
 
-   1. [Variables in TS](tutorial/variables.md)
-   2. [Complex Types](tutorial/complex_types.md)
+   1. [Variables in TS](tutorials/variables.md)
+   2. [Complex Types](tutorials/complex_types.md)
+   3. [Configuration](tutorials/configuration.md)

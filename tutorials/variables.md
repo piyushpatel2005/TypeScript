@@ -4,6 +4,10 @@ TypeScript supports `let` and `const` which are relatively new in JavaScript.
 
 TypeScript files are saved as `.ts` files.
 
+[Simple Hello example](../examples/hello.ts)
+
+It will create `hello.js` file which can be run in console using `node hello` command.
+
 **Syntax:**
 `let variableName: variableType`
 
@@ -18,6 +22,7 @@ let x: number;
 - Semicolons are optional in both JS and TS.
 
 - **const** is used to declare constatnts. As they cannot change once assigned. They are not declared with type.
+- **let** keyword is used to declared block-level variables as other programming languages.
 
 ```typescript
 const pi = 3.14
@@ -76,6 +81,12 @@ let list: number[] = [1, 2, 3];
 let list: Array<number> = [1, 2, 3];
 ```
 
+For looping through array elements, you can use 'for...in' or 'for...of' structure.
+
+[for in example](../examples/forin.ts)
+
+[Example of for...of](../examples/forin.ts)
+
 - **Tuple** types allow you to express an array where the type of a fixed number of elements is known.
 
 ```typescript
@@ -103,6 +114,26 @@ enum Color {Red = 1, Green = 2, Blue = 4};
 let colorName: string = Color[2];
 console.log(colorName);   // Green
 ```
+
+```typescript
+enum DoorState {
+  Open, Closed, Ajar
+}
+```
+
+**Const Enum**
+
+```typescript
+const enum DoorStateConst {
+  Open,
+  Closed,
+  Ajar
+}
+var constDoorOpen = DoorStateConst.Open;
+console.log(`constDoorOpen is : ${constDoorOpen}`);
+// constDoorOpen is : 0
+```
+
 
 - **Any**: When value of the variable is not already known. It might come from 3rd party library. To let the values pass through and skip the type checking, we use any type.
 
@@ -161,3 +192,23 @@ Another using 'as' syntax.
 let someValue: any = "this is a string";
 let strLength: number = (someValue as string).length;
 ```
+
+Strong typing means the types on the left hand side of an assignment operator are the same as the types on the right-hand side of the assignment operator.
+
+### Template Strings
+
+Typescript also support template strings to make it convenient to inject values into string.
+
+```typescript
+var myVar = "test";
+console.log(`myVariable = ${myVar}`);
+```
+
+### Casting
+
+```TypeScript
+var item1 = <any>{id: 1, name: "item 1"};
+item1 = {id: 2};
+```
+
+In practice, `any` is rarely used and an interface is used that can be used instead of any.
